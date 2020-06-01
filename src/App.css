@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+*{
+   font-family: verdana,serif,sans-serif;
+}
+nav{
+   text-align: right;
+overflow:hidden;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+nav ul{
+        list-style:none;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    }
+nav ul li{
+   display:inline;
+ margin-right:20px;
+
+}
+nav ul li a{
+    color:black;
+    border:none;
+
+}
+nav ul li a:hover{
+     color:#2FC5C4;
+
+}
+section{
+   padding:120px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.tarjeta{
+ background: none;
+   margin-right: auto;
+   margin-left: auto;
+   width:750px;
+   text-align: center;
+   border-radius: 20px;
+   padding:10px;
+   outline: none;
+   box-shadow: 0px   2px 3px 0px rgb(0,0,0,12);
 }
 
-.App-link {
-  color: #61dafb;
+input{
+
+   display:block;
+   width:100%;
+   font-size: 150%;
+   background: none;
+   outline: none;
+   margin:3px;
+
+   background-color:lightblue;
+border-color: none;
+
+
+
+}
+.login div{
+
+   text-align:left;
+   margin:20px;
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link{
+   text-align: center;
+  font-size:110%;
+   padding: 10px;
+}
+.link2{
+   text-align: center;
+  font-size:110%;
+   padding: 10px;
+}
+.link a{
+color:black;
+
+}
+.link2 a{
+color:black;
+}
+.link a:hover{
+     color:#2FC5C4;
+}
+
+.link2 a:hover{
+    color:#2FC5C4;
+}
+
+.imagen{
+text-align: center;
+
+}
+.avatar{
+      border-radius: 90%;
+   padding:none;
+}
+
+
+.mensaje{
+   display:inline;
+}
+.mensaje2{
+    display:inline;
+}
+.boton{
+    background-color: royalblue;
+    border-color: royalblue;
+    font-size: 140%;
+    font-family: serif;
+    color:white;}
+
+
+    .boton:hover{
+    background-color: royalblue;
+    border-color: royalblue;
+    color:#2FC5C4;
 }
