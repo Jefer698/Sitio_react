@@ -1,7 +1,7 @@
 import React from 'react';
-import RegisterForm from './RegisterForm';
 
-export default function Content(){
+
+export default function Content(props){
     return(
 <>
 <section>
@@ -10,10 +10,10 @@ export default function Content(){
 
         <div class="formulario">
                    <header>
-                   <h2>Registro de usuario</h2>
+    <h2>{props.title}</h2>
                           
                    </header>
-                   <RegisterForm/>
+                  {props.children}
                    </div>
                    </section>
                   
