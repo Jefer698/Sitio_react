@@ -11,7 +11,7 @@ function Register(){
  <div class="formulario">
             <header>
             <h2>Registro de usuario</h2>
-                   <h3>HOLA que tal</h3>
+                   <h3>HOLA que tal aa</h3>
             </header>
 
            <form class="register">

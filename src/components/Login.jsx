@@ -11,7 +11,7 @@ function Login(){
 
     <div class="formulario">
     <header>
-        <h2>Ingreso</h2>
+        <h2>Ingreso usuario</h2>
 
         </header>
         <form class="login">

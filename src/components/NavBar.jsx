@@ -7,7 +7,7 @@ export default function NavBar(){
      <ul>
  
       <li> <a href="#">Contacto</a></li>
-     
+     <p>Hola</p>
 
 
 
