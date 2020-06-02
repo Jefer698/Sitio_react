@@ -5,7 +5,7 @@ export default function NavBar(){
 <header>
     <nav>
      <ul>
- 
+      <li><a href="#">Registro</a></li>
       <li> <a href="#">Contacto</a></li>
      
 
