@@ -34,15 +34,18 @@ section{
   justify-content: center;
 }
 .formulario{
- background: none;
-   margin-right: auto;
-   margin-left: auto;
-   width:750px;
-   text-align: center;
-   border-radius: 20px;
-   padding:10px;
-   outline: none;
-   box-shadow: 0px   2px 3px 0px rgb(0,0,0,12);
+ 
+  
+   background: none;
+           margin-right: auto;
+           margin-left: auto;
+           width:750px;
+           text-align: center;
+           border-radius: 20px;
+           padding:10px;
+           outline: none;
+           box-shadow: 0px   2px 3px 0px rgb(0,0,0,12);
+      
 }
 
 
@@ -54,31 +57,26 @@ input{
    background: none;
    outline: none;
    margin:3px;
-
-   background-color:lightblue;
+background-color:lightblue;
 border-color: none;
 
-
-
 }
-.login div{
-
-   text-align:left;
-   margin:20px;
+.formulario div {
+   text-align: left;
+  margin:20px;
+   
 }
-.register div{
 
-   text-align:left;
-   margin:20px;
-}
+
 textarea{
    display:block;
    width:100%;
 }
-.link{
+.formulario .link{
    text-align: center;
   font-size:110%;
    padding: 10px;
+   justify-content: center;
 }
 
 .link a{

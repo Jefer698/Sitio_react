@@ -1,6 +1,7 @@
 
 import React from 'react';
 import NavBar from './NavBar';
+import Footer from './Footer';
 function Login(){
     return(
 
@@ -14,7 +15,7 @@ function Login(){
         <h2>Ingreso</h2>
 
         </header>
-        <form class="login">
+        <form >
             <div>
         <label>Correo</label>
         <i class="fas fa-user" aria-hidden="true"></i>
@@ -47,6 +48,7 @@ function Login(){
 
         </div>
           </section>
+          <Footer/>
 
     </>
 
