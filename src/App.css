@@ -2,6 +2,7 @@
 *{
    font-family: verdana,serif,sans-serif;
 }
+
 nav{
    text-align: right;
 overflow:hidden;
@@ -32,7 +33,7 @@ section{
    padding:120px;
   justify-content: center;
 }
-.tarjeta{
+.formulario{
  background: none;
    margin-right: auto;
    margin-left: auto;
@@ -43,6 +44,7 @@ section{
    outline: none;
    box-shadow: 0px   2px 3px 0px rgb(0,0,0,12);
 }
+
 
 input{
 
@@ -63,51 +65,35 @@ border-color: none;
 
    text-align:left;
    margin:20px;
-
-
 }
+.register div{
 
+   text-align:left;
+   margin:20px;
+}
+textarea{
+   display:block;
+   width:100%;
+}
 .link{
    text-align: center;
   font-size:110%;
    padding: 10px;
 }
-.link2{
-   text-align: center;
-  font-size:110%;
-   padding: 10px;
-}
+
 .link a{
 color:black;
 
 }
-.link2 a{
-color:black;
-}
+
 .link a:hover{
      color:#2FC5C4;
 }
 
-.link2 a:hover{
-    color:#2FC5C4;
-}
-
-.imagen{
-text-align: center;
-
-}
-.avatar{
-      border-radius: 90%;
-   padding:none;
-}
-
-
-.mensaje{
+p{
    display:inline;
 }
-.mensaje2{
-    display:inline;
-}
+
 .boton{
     background-color: royalblue;
     border-color: royalblue;
