@@ -1,22 +1,12 @@
 import React from 'react';
-
-
+import InputLine from './InputLine';
 export default function LoginForm(){
 
     return(
 <>
 <form >
-            <div>
-        <label>Correo</label>
-        <i class="fas fa-user" aria-hidden="true"></i>
-        <input type="email" placeholder="Ingrese correo"/>
-                </div>
-            <div>
-        <label>Contraseña</label>
-            <i class="fas fa-lock" ></i>
-            <input type="password"placeholder="Ingresa contraseña"/>
-                </div>
-            
+           <InputLine label="Correo" type="email" placeholder="Ingrese correo" required={true}/>
+           <InputLine label="Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minlength={4} maxlength={8}/>
             <button class="boton">Ingresar</button>
             
 

@@ -1,32 +1,19 @@
 import React from 'react';
-
+import InputLine from './InputLine';
 
 export default function RegisterForm(){
     return(
 
 <>
 <form >
-               <div>
-               <label>Correo</label>
-                <i class="fas fa-at"></i>
-
-                   <input type="email"  placeholder="Ingrese correo"/>
-                </div>
-               
-               <div>
-               <label>Contraseña</label>
-                <i class="fas fa-lock" ></i>
-                    <input id="password" type="password" placeholder="Ingrese contraseña" minlength="4" maxlength="8" />
-                  
-
-               </div>
-                 <div>
-               <label>Confirme contraseña</label>
-                <i class="fas fa-lock" ></i>
-                    <input id="confirmacion" type="password" placeholder="Ingrese contraseña" />
+           <InputLine label="Correo" type="email" placeholder="Ingrese correo" required={true}/>
+           <InputLine label="Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minlength={4} maxlength={8}/>
+           <InputLine label="Confirme Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minlength={4} maxlength={8} /> 
+                
+                    
                           
 
-               </div>
+               
                <div>
                <label>Navegadores Preferidos</label>
                <select required>

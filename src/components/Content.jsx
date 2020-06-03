@@ -2,6 +2,7 @@ import React from 'react';
 
 
 export default function Content(props){
+    const {title,children}=props;
     return(
 <>
 <section>
@@ -10,10 +11,10 @@ export default function Content(props){
 
         <div class="formulario">
                    <header>
-    <h2>{props.title}</h2>
+    <h2>{title}</h2>
                           
                    </header>
-                  {props.children}
+                  {children}
                    </div>
                    </section>
                   
