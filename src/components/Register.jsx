@@ -10,6 +10,8 @@ const links=[
     {href: 'terminos.html', title: 'Terminos y Condiciones'}
     
     ];
+
+
 function Register(){
     return(
 <>

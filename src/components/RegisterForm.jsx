@@ -1,5 +1,15 @@
 import React from 'react';
 import InputLine from './InputLine';
+import SelectLine from './SelectLine';
+
+const browsers=[
+{value:'',label:'Seleccione...'},
+{ value:'Google_Chrome', label:'Google Chrome'},
+{ value:'Mozilla_Firefox', label:'Mozilla Firefox'},
+{ value:'Safari', label:'Safari'},
+{ value:'Microsoft_Edge',label:'Microsoft Edge'}
+
+];
 
 export default function RegisterForm(){
     return(
@@ -11,32 +21,18 @@ export default function RegisterForm(){
            <InputLine label="Confirme Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minlength={4} maxlength={8} /> 
                 
                     
-                          
+              <SelectLine label="Navegador Preferido"options={browsers}/>            
 
                
+           
+            <InputLine label="Edad" type="number"min={1}max={150}/>
+            
+
+
+     
                <div>
-               <label>Navegadores Preferidos</label>
-               <select required>
-                   <option value=""disabled selected>Seleccione...</option>
-                   <option value="google_chrome"> Google Chrome </option>
-                     <option value="moziila_firefox"> Mozilla Firefox </option>
-                     <option value="safari"> Safari</option>
-                     <option value="microsoft-edge"> Microsoft Edge </option>
-
-                   </select>
-
-
-               </div>
-               <div>
-
-            <label>Edad</label>
-            <input type="number" min="1" max="150"/>
-
-
-            </div>
-               <div>
-               <label class="d1">Descripción</label>
-                   <textarea rows="8"></textarea>
+               <label >Descripción</label>
+                   <textarea rows="8">Texto Ejemplo</textarea>
 
 
                </div>

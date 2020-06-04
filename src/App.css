@@ -25,6 +25,7 @@ nav ul li a{
     border:none;
 
 }
+ 
 nav ul li a:hover{
      color:#2FC5C4;
 
@@ -60,6 +61,7 @@ input{
 background-color:lightblue;
 border-color: none;
 
+
 }
 .formulario div {
    text-align: left;
@@ -67,16 +69,25 @@ border-color: none;
    
 }
 
-
+label{
+   font-size:20px;
+}
 textarea{
    display:block;
    width:100%;
+  font-size:20px;
 }
 .formulario .link{
    text-align: center;
   font-size:110%;
    padding: 10px;
    justify-content: center;
+}
+select{
+   display:block;
+   width:100%;
+   font-size: 20px;
+  
 }
 
 .link a{

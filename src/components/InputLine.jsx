@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function InputLine(props){
-    const {label,type,placeholder,required,minlength,maxlength}=props;
+    const {label,type,placeholder,required,minlength,maxlength,min,max}=props;
     /*
 const label = props label;
 const type = props type;
@@ -14,7 +14,7 @@ const required= props required;
         <div>
         <label>{label}</label>
         
-        <input type={type} placeholder={placeholder} required={required} minlength={minlength} maxlength={maxlength} />
+        <input type={type} placeholder={placeholder} required={required} minlength={minlength} maxlength={maxlength}min={min}max={max} />
                 </div>
                
 
