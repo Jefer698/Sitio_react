@@ -69,8 +69,10 @@ border-color: none;
    
 }
 
-label{
+ label{
    font-size:20px;
+  
+ 
 }
 textarea{
    display:block;
@@ -102,13 +104,16 @@ color:black;
 p{
    display:inline;
 }
-
 .boton{
     background-color: royalblue;
     border-color: royalblue;
     font-size: 140%;
     font-family: serif;
-    color:white;}
+    color:white;
+    
+   
+   }
+    
 
 
     .boton:hover{

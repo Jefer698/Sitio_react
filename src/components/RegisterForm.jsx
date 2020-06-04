@@ -1,6 +1,7 @@
 import React from 'react';
 import InputLine from './InputLine';
 import SelectLine from './SelectLine';
+import TextareaLine from './TextareaLine';
 
 const browsers=[
 {value:'',label:'Seleccione...'},
@@ -10,6 +11,12 @@ const browsers=[
 { value:'Microsoft_Edge',label:'Microsoft Edge'}
 
 ];
+
+const languages={
+id:'lenguajes',
+options:['Javascript','Python','Java']
+
+};
 
 export default function RegisterForm(){
     return(
@@ -21,38 +28,22 @@ export default function RegisterForm(){
            <InputLine label="Confirme Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minlength={4} maxlength={8} /> 
                 
                     
-              <SelectLine label="Navegador Preferido"options={browsers}/>            
+              <SelectLine label="Navegador Preferido"options={browsers} required={true} step="any"/>            
 
                
            
             <InputLine label="Edad" type="number"min={1}max={150}/>
-            
+            <TextareaLine label="Descripción" rows="8" placeholder="Texto ejemplo"/>
 
-
+            <InputLine label = "Lenguaje de Programacion Preferido"  
+            type="text"
+            list={languages}
+            required={true}/>
      
-               <div>
-               <label >Descripción</label>
-                   <textarea rows="8">Texto Ejemplo</textarea>
-
-
-               </div>
-               <div>
-               <label>Lenguaje de Programación Preferido</label>
-                   <input list="lenguajes"/>
-                   <datalist id="lenguajes">
-                <option>Javascript</option>
-                 <option>Python</option>
-                       <option>Java</option>
-
-                   </datalist>
-
-               </div>
-              
-              
-
-
-             <button class="boton" >Registrarse</button>
+     <button class="boton" >Registrarse</button>
+ 
         </form>
+      
              <div class ="link">
       <p >Estas registrado?</p>  <a href="login2.html">Ingresar</a>
 

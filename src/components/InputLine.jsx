@@ -1,7 +1,17 @@
 import React from 'react';
 
 export default function InputLine(props){
-    const {label,type,placeholder,required,minlength,maxlength,min,max}=props;
+    const {label,
+        type,
+        placeholder,
+        required,
+        minlength,
+        maxlength,
+        min,
+        max,
+        step,
+        list
+        }=props;
     /*
 const label = props label;
 const type = props type;
@@ -14,7 +24,26 @@ const required= props required;
         <div>
         <label>{label}</label>
         
-        <input type={type} placeholder={placeholder} required={required} minlength={minlength} maxlength={maxlength}min={min}max={max} />
+        <input type={type} 
+        placeholder={placeholder} 
+        required={required}
+         minlength={minlength} 
+         maxlength={maxlength}
+         min={min}
+         max={max} 
+         step={step}
+         list={list && list.id}/>
+         {list &&
+            <datalist id={list.id}>
+                {list.options.map(option=>
+                        <option >{option}</option>
+                    )}
+            
+               
+            </datalist>
+
+         }
+         
                 </div>
                
 
