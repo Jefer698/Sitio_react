@@ -2,7 +2,7 @@ import React from 'react';
 import InputLine from './InputLine';
 import SelectLine from './SelectLine';
 import TextareaLine from './TextareaLine';
-
+import OutputLine from './OutputLine';
 const browsers=[
 {value:'',label:'Seleccione...'},
 { value:'Google_Chrome', label:'Google Chrome'},
@@ -39,7 +39,8 @@ export default function RegisterForm(){
             type="text"
             list={languages}
             required={true}/>
-     
+            
+     <OutputLine label="Fecha de hoy" value="04/06/2020"/>
      <button class="boton" >Registrarse</button>
  
         </form>

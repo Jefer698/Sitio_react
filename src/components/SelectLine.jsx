@@ -1,11 +1,10 @@
 import React from 'react';
-
+import LineField from './LineField';
 export default function SelectLine(props){
     const{label,options,required}=props;
 return(
 
-    <div>
-    <label>{label}</label>
+    <LineField label={label}>
     <select required={required}>
         {   options.map(option=>
             <option 
@@ -18,8 +17,8 @@ return(
 
         </select>
 
-
-    </div>
+        </LineField>
+  
 
 
 

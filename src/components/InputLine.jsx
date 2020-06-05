@@ -1,5 +1,5 @@
 import React from 'react';
-
+import LineField from './LineField';
 export default function InputLine(props){
     const {label,
         type,
@@ -21,8 +21,7 @@ const required= props required;
     */
     return(
         <>
-        <div>
-        <label>{label}</label>
+        <LineField label={label}>
         
         <input type={type} 
         placeholder={placeholder} 
@@ -43,8 +42,9 @@ const required= props required;
             </datalist>
 
          }
+         </LineField>
          
-                </div>
+              
                
 
 </>

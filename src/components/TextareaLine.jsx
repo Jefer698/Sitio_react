@@ -8,7 +8,7 @@ export default function TextareaLine(props){
 
      <div>
         <label >{label}</label>
-            <textarea rows={rows} placeholder={placeholder}></textarea>
+            <textarea rows={rows} placeholder={placeholder} ></textarea>
 </div>
 
       
