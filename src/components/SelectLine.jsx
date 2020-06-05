@@ -5,12 +5,13 @@ export default function SelectLine(props){
 return(
 
     <LineField label={label}>
-    <select required={required}>
-        {   options.map(option=>
+    <select defaultValue=""required={required}>
+        {   options.map((option,key)=>
             <option 
+            key={key}
             value={option.value}
             disabled={option.value===''}
-            selected={option.value===''}
+           
             >{option.label}</option>)
         }
         

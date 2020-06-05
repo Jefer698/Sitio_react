@@ -21,13 +21,13 @@ nav ul li{
 
 }
 nav ul li a{
-    color:black;
+    color:red;
     border:none;
 
 }
  
 nav ul li a:hover{
-     color:#2FC5C4;
+     color:grey;
 
 }
 section{

@@ -24,8 +24,8 @@ export default function RegisterForm(){
 <>
 <form >
            <InputLine label="Correo" type="email" placeholder="Ingrese correo" required={true}/>
-           <InputLine label="Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minlength={4} maxlength={8}/>
-           <InputLine label="Confirme Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minlength={4} maxlength={8} /> 
+           <InputLine label="Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minLength={4} maxLength={8}/>
+           <InputLine label="Confirme Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minLength={4} maxLength={8} /> 
                 
                     
               <SelectLine label="Navegador Preferido"options={browsers} required={true} step="any"/>            
@@ -41,11 +41,11 @@ export default function RegisterForm(){
             required={true}/>
             
      <OutputLine label="Fecha de hoy" value="04/06/2020"/>
-     <button class="boton" >Registrarse</button>
+     <button className="boton" >Registrarse</button>
  
         </form>
       
-             <div class ="link">
+             <div className ="link">
       <p >Estas registrado?</p>  <a href="login2.html">Ingresar</a>
 
                 </div>

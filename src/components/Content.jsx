@@ -6,10 +6,7 @@ export default function Content(props){
     return(
 <>
 <section>
-        
-
-
-        <div class="formulario">
+        <div className="formulario">
                    <header>
     <h2>{title}</h2>
                           

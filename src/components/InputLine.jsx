@@ -5,8 +5,8 @@ export default function InputLine(props){
         type,
         placeholder,
         required,
-        minlength,
-        maxlength,
+        minLength,
+        maxLength,
         min,
         max,
         step,
@@ -26,16 +26,16 @@ const required= props required;
         <input type={type} 
         placeholder={placeholder} 
         required={required}
-         minlength={minlength} 
-         maxlength={maxlength}
+         minLength={minLength} 
+         maxLength={maxLength}
          min={min}
          max={max} 
          step={step}
          list={list && list.id}/>
          {list &&
             <datalist id={list.id}>
-                {list.options.map(option=>
-                        <option >{option}</option>
+                {list.options.map((option,key)=>
+                        <option key={key}>{option}</option>
                     )}
             
                
