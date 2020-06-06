@@ -10,7 +10,9 @@ export default function InputLine(props){
         min,
         max,
         step,
-        list
+        list,
+        onChange,
+        name
         }=props;
     /*
 const label = props label;
@@ -31,6 +33,7 @@ const required= props required;
          min={min}
          max={max} 
          step={step}
+         onChange={(event) => onChange(name,event)}
          list={list && list.id}/>
          {list &&
             <datalist id={list.id}>
