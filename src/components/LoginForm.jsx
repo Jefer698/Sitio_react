@@ -3,16 +3,43 @@ import InputLine from './InputLine';
 
 export default class LoginForm extends React.Component{
 state={
-    loginData:{
+    loginData: {
         email:'',
         password:''
+    },
+    errors: {
+        email: false,
+        password: false
     }
 };
 
+isEmpty = (value) => {
+    return value.trim() === '';
+    /*
+    if(value ==='') {
+        return true;
+    }
+    else{
+        return false;
+    }*/
+}
 
     doLogin = (event) => {
-   console.log(this.state);
 
+   const {email , password}=this.state.loginData;
+   const emailError= this.isEmpty(email);
+   const passwordError= this.isEmpty(password);
+
+console.log('Email error: '+emailError);
+console.log('Password error: '+passwordError);
+
+this.setState({
+errors: {
+    email:emailError,
+    password:passwordError
+}
+
+});
     event.preventDefault();
 }
 onChange = (name,event) => {
@@ -29,11 +56,31 @@ onChange = (name,event) => {
 
     
 render(){
+    const{errors}=this.state;
     return(
         <>
         <form >
-                   <InputLine name="email" label="Correo" type="email" placeholder="correo@ejemplo.cl" required={true} onChange={this.onChange}/>
-                   <InputLine name="password" label="Contraseña" type="password" placeholder="Ingrese contraseña" required={true} minLength={4} maxLength={8} onChange={this.onChange}/>
+                   <InputLine 
+                   name="email" 
+                   label="Correo" 
+                   type="email" 
+                   placeholder="correo@ejemplo.cl" 
+                   required={true}
+                    onChange={this.onChange}
+                    error={errors.email}
+
+                    />
+                   <InputLine
+                    name="password" 
+                    label="Contraseña"
+                     type="password" 
+                     placeholder="Ingrese contraseña"
+                      required={true} 
+                      minLength={4} 
+                      maxLength={8} 
+                      onChange={this.onChange}
+                      error={errors.password}
+                      />
                     <button className="boton" onClick={this.doLogin}>Ingresar</button>
                     
         

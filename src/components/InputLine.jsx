@@ -12,7 +12,8 @@ export default function InputLine(props){
         step,
         list,
         onChange,
-        name
+        name,
+        error
         }=props;
     /*
 const label = props label;
@@ -20,6 +21,14 @@ const type = props type;
 const placeholder= props placeholder;
 const required= props required;
 
+
+if(error === true){
+    className='InputError';}
+    else{
+        className='';
+    }
+
+    className=Error===true?'InputError':'';
     */
     return(
         <>
@@ -34,6 +43,7 @@ const required= props required;
          max={max} 
          step={step}
          onChange={(event) => onChange(name,event)}
+         className={error ? 'inputError':undefined}
          list={list && list.id}/>
          {list &&
             <datalist id={list.id}>

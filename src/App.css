@@ -121,3 +121,7 @@ p{
     border-color: royalblue;
     color:#2FC5C4;
 }
+
+.inputError{
+   box-shadow: 0px 0px 6px 2px rgb(255,0,0);
+}
