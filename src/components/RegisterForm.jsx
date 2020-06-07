@@ -18,7 +18,71 @@ options:['Javascript','Python','Java']
 
 };
 
-export default function RegisterForm(){
+export default class RegisterForm extends React.component{
+    state={
+        registerData: {
+            email:'',
+            password:'',
+            confirmation:'',
+            browser:'',
+            age:'',
+            description:'',
+            language:'',
+            currentDate:''
+
+
+        },
+        errors: {
+            email:false,
+            password:'',
+            confirmation:'',
+            browser:'',
+            age:'',
+            description:'',
+            language:'',
+            currentDate:''
+        }
+    };
+    
+    isEmpty = (value) => {
+        return value.trim() === '';
+        /*
+        if(value ==='') {
+            return true;
+        }
+        else{
+            return false;
+        }*/
+    }
+    
+        doLogin = (event) => {
+    
+       const {email , password}=this.state.loginData;
+       const emailError= this.isEmpty(email);
+       const passwordError= this.isEmpty(password);
+    
+    console.log('Email error: '+emailError);
+    console.log('Password error: '+passwordError);
+    
+    this.setState({
+    errors: {
+        email:emailError,
+        password:passwordError
+    }
+    
+    });
+        event.preventDefault();
+    }
+    onChange = (name,event) => {
+        const value = event.target.value;
+        const loginData= Object.assign({},this.state.loginData)
+       loginData[name]=value
+       this.setState({
+           loginData
+       });
+    }
+
+    render(){
     return(
 
 <>
@@ -54,4 +118,5 @@ export default function RegisterForm(){
             </>
 
     );
+}
 }
