@@ -1,10 +1,12 @@
 import React from 'react';
-import InputLine from './InputLine';
+import InputLine from '../components/InputLine';
+import {validatePassword,validateEmail} from '../utils/validations';
+
 
 export default class LoginForm extends React.Component{
 state={
     loginData: {
-        email:'',
+        email:'test@hola.cl',
         password:''
     },
     errors: {
@@ -13,22 +15,16 @@ state={
     }
 };
 
-isEmpty = (value) => {
-    return value.trim() === '';
-    /*
-    if(value ==='') {
-        return true;
-    }
-    else{
-        return false;
-    }*/
-}
+
 
     doLogin = (event) => {
 
-   const {email , password}=this.state.loginData;
-   const emailError= this.isEmpty(email);
-   const passwordError= this.isEmpty(password);
+   const {
+        email ,
+        password}=this.state.loginData;
+   const emailError= !validateEmail(email);
+   const passwordError= !validatePassword(password,email);
+  
 
 console.log('Email error: '+emailError);
 console.log('Password error: '+passwordError);
@@ -54,8 +50,12 @@ onChange = (name,event) => {
 
 
 
+
     
 render(){
+    const{
+        email,
+        password}=this.state.loginData;
     const{errors}=this.state;
     return(
         <>
@@ -63,11 +63,12 @@ render(){
                    <InputLine 
                    name="email" 
                    label="Correo" 
-                   type="email" 
+                   type="text" 
                    placeholder="correo@ejemplo.cl" 
                    required={true}
                     onChange={this.onChange}
                     error={errors.email}
+                    value={email}
 
                     />
                    <InputLine
@@ -80,6 +81,7 @@ render(){
                       maxLength={8} 
                       onChange={this.onChange}
                       error={errors.password}
+                      value={password}
                       />
                     <button className="boton" onClick={this.doLogin}>Ingresar</button>
                     

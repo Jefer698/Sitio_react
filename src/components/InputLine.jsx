@@ -13,7 +13,8 @@ export default function InputLine(props){
         list,
         onChange,
         name,
-        error
+        error,
+        value
         }=props;
     /*
 const label = props label;
@@ -44,6 +45,7 @@ if(error === true){
          step={step}
          onChange={(event) => onChange(name,event)}
          className={error ? 'inputError':undefined}
+         value={value}
          list={list && list.id}/>
          {list &&
             <datalist id={list.id}>

@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Content from '../components/Content';
-import RegisterForm from '../components/RegisterForm';
+import RegisterForm from '../containers/RegisterForm';
 const links=[
 
     {href: 'login', title: 'Ingresar'},
@@ -12,7 +12,7 @@ const links=[
     ];
 
 
-function Register(){
+export default function Register(){
     return(
 <>
 <NavBar links={links} />
@@ -27,4 +27,3 @@ function Register(){
     );
 }
 
-export default Register;

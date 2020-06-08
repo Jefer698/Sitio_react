@@ -7,10 +7,9 @@ export default function Content(props){
 <>
 <section>
         <div className="formulario">
-                   <header>
-    <h2>{title}</h2>
-                          
-                   </header>
+        <header>
+            <h2>{title}</h2>                
+        </header>
                   {children}
                    </div>
                    </section>

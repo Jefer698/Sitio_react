@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import './App.css';
 import { 
@@ -21,6 +22,9 @@ function App() {
       </Route>
       <Route path="/register">
         <Register/>
+      </Route>
+      <Route path="/contact">
+        <Contact/>
       </Route>
       <Route path="*">
       <NotFound/>
